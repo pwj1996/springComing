@@ -1,0 +1,36 @@
+spring:
+  datasource1:
+    # MySQL database configuration.
+    # driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # url: jdbc:mysql://39.97.176.170:3306/springcoming?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    # url和jdbc的区别
+    url: jdbc:mysql://39.97.176.170:3306/springcoming?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+
+  datasource2:
+    # MySQL database configuration.
+    # driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.97.176.170:3306/springcoming?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+
+
+  # 试图解析器
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+    static-path-pattern: /static/**
+
+
+# 需要导入org.mybatis.spring.boot
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    cache-enabled: true
+
+
