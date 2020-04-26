@@ -42,13 +42,13 @@ public class DataSourceConfig {
     /**
      * 动态数据源
      *
-     * @return
+     * @return AbstractRoutingDataSource的实现类，实现相关Datasource的注册
      */
     @Bean
     public DynamicDataSource dynamicDataSource() {
         DynamicDataSource dataSource = new DynamicDataSource();
-        //默认数据源，在没有切换数据源的时候使用该数据源
-        dataSource.setDefaultTargetDataSource(dataSource2());
+        //默认数据源dataSource1，在没有切换数据源的时候使用该数据源
+        dataSource.setDefaultTargetDataSource(dataSource1());
         HashMap<Object, Object> map = new HashMap<>();
         map.put("dataSource1", dataSource1());
         map.put("dataSource2", dataSource2());
@@ -75,7 +75,7 @@ public class DataSourceConfig {
     /**
      * 设置事务管理器
      *
-     * @return
+     * @return 事务管理交由DynamicDataSource()
      */
     @Bean
     public PlatformTransactionManager transactionManager() {
