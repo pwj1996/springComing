@@ -23,7 +23,7 @@ public class DataSourceConfig {
 
     @Bean(name = "dataSource1")
     @Primary
-    @ConfigurationProperties(prefix = "spring.datasource1")
+    @ConfigurationProperties(prefix = "spring.datasource1.druid")
     public DataSource dataSource1() {
         System.out.println("dataSource1");
         return new DruidDataSource();
@@ -34,8 +34,9 @@ public class DataSourceConfig {
      * 第二个数据源
      */
     @Bean(name = "dataSource2")
-    @ConfigurationProperties(prefix = "spring.datasource2")
+    @ConfigurationProperties(prefix = "spring.datasource2.druid")
     public DataSource dataSource2() {
+        System.out.println("datasource2");
         return new DruidDataSource();
     }
 
@@ -72,13 +73,20 @@ public class DataSourceConfig {
         factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:/mapper/*.xml"));
         return factoryBean.getObject();
     }
+
     /**
      * 设置事务管理器
      *
-     * @return 事务管理交由DynamicDataSource()
+     * @return 设置DynamicDataSource()的事务管理
      */
     @Bean
     public PlatformTransactionManager transactionManager() {
         return new DataSourceTransactionManager(dynamicDataSource());
+    }
+
+    @Bean
+    public Object testBean(PlatformTransactionManager platformTransactionManager){
+        System.out.println(">>>>>>>>>>" + platformTransactionManager.getClass().getName());
+        return new Object();
     }
 }
