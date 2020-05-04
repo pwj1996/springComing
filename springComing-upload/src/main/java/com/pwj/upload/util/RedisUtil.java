@@ -1,4 +1,4 @@
-package com.pwj.admin.util;
+package com.pwj.upload.util;
 
 import java.util.List;
 import java.util.Map;

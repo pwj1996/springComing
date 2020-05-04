@@ -53,11 +53,6 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-aop</artifactId>
     </dependency>
-    <!-- Spring Data Redis and the Lettuce client -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-redis</artifactId>
-    </dependency>
     <!--jdbc-->
     <!--自动获得HikariCP的以来关系-->
     <dependency>
@@ -71,13 +66,6 @@
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
-    <dependency>
-      <groupId>redis.clients</groupId>
-      <artifactId>jedis</artifactId>
-      <version>3.0.1</version>
-    </dependency>
-
 
     <!--mybatis-->
     <dependency>
@@ -107,12 +95,6 @@
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.16.16</version><!--版本号自己选一个就行-->
     </dependency>
 
   </dependencies>

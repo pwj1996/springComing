@@ -1,4 +1,4 @@
-package com.pwj.admin.config;
+package com.pwj.upload.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
