@@ -41,6 +41,13 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
     </dependency>
+
+    <!--aop-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
+
     <!-- Spring Data Redis and the Lettuce client -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -54,16 +61,23 @@
     </dependency>
 
     <!--mybatis-->
-<!--    <dependency>-->
-<!--      <groupId>org.mybatis.spring.boot</groupId>-->
-<!--      <artifactId>mybatis-spring-boot-starter</artifactId>-->
-<!--      <version>${mybatis.version}</version>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>org.mybatis.spring.boot</groupId>-->
-<!--      <artifactId>mybatis-spring-boot-starter-test</artifactId>-->
-<!--      <version>${mybatis.version}</version>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+      <version>${mybatis.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter-test</artifactId>
+      <version>${mybatis.version}</version>
+    </dependency>
+
+    <!--连接池-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid-spring-boot-starter</artifactId>
+      <version>1.1.17</version>
+    </dependency>
 
     <dependency>
       <groupId>org.projectlombok</groupId>
