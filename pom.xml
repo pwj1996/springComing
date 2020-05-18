@@ -11,6 +11,8 @@
   <modules>
     <module>springComing-upload</module>
     <module>springComing-admin</module>
+      <module>springComing-netty</module>
+      <module>springComing-zookeeper</module>
   </modules>
 
   <name>springComing</name>
